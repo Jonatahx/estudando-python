@@ -16,22 +16,24 @@ class Aluno:
         self.nota1 = nota1
         self.nota2 = nota2
 
-    def verificar_situacao(self):
-        print(f"Situação do aluno:"
-        f"primeira nota: {self.nota1}"
-        f"segunda nota: {self.nota2}")
-
     def calcular_media(self):
         return (self.nota1 + self.nota2) / 2
 
-    def exibir_resultado(self):
-        print(f"A nota final do aluno é: {self.calcular_media()}")
-        if self.exibir_resultado() >= 6:
-            print("Aluno aprovado!")
-        elif self.exibir_resultado() >= 4:
-            print("Alundo de recuperação...")
+    def verificar_situacao(self):
+        if self.calcular_media() >= 6:
+            return "Aluno aprovado!"
+        elif self.calcular_media() >= 4:
+            return "Alundo de recuperação..."
         else:
-            print("Aluno reprovado.")
+            return "Aluno reprovado."
+
+    def exibir_resultado(self):
+        print(f"Aluno: {self.nome}")
+        print(f"Primeira nota: {self.nota1}")
+        print(f"Segunda nota: {self.nota2}")
+        print(f"Média: {self.calcular_media()}")
+        print(f"Situação: {self.verificar_situacao()}")
+
 
 nome_aluno = input("Digite o nome do aluno: ")
 nota1_aluno = float(input("Digite a primeira nota do aluno: "))
@@ -39,5 +41,4 @@ nota2_aluno = float(input("Digite a segunda nota do aluno: "))
 
 aluno1 = Aluno(nome_aluno, nota1_aluno, nota2_aluno)
 
-aluno1.verificar_situacao()
 aluno1.exibir_resultado()
