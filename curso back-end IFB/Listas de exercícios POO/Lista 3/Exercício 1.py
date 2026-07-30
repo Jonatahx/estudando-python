@@ -14,9 +14,9 @@ class Pessoa:
         self.cidade = cidade
 
     def apresentar(self):
-            print(f"Nome: {self.nome}\n")
-            print(f"idade: {self.idade}\n")
-            print(f"Cidade:  {self.cidade}\n")
+        print(f"Nome: {self.nome}\n")
+        print(f"idade: {self.idade}\n")
+        print(f"Cidade:  {self.cidade}\n")
 
 pessoa1 = Pessoa("Roberto", 49, "New Jersey")
 pessoa1.apresentar()
